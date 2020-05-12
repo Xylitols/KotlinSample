@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
@@ -9,23 +9,31 @@
         android:id="@+id/startTimeLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="77dp"
         android:text="Activity 시작시간"
-        tools:layout_editor_absoluteX="154dp"
-        tools:layout_editor_absoluteY="78dp" />
+        app:layout_constraintStart_toStartOf="@+id/clickCountLabel"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/clickCountLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="45dp"
         android:text="버튼이 클릭된 횟수"
-        tools:layout_editor_absoluteX="150dp"
-        tools:layout_editor_absoluteY="141dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/startTimeLabel" />
 
     <Button
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="11dp"
+        android:layout_marginLeft="11dp"
+        android:layout_marginTop="56dp"
         android:text="클릭"
-        tools:layout_editor_absoluteX="161dp"
-        tools:layout_editor_absoluteY="216dp" />
+        app:layout_constraintStart_toStartOf="@+id/clickCountLabel"
+        app:layout_constraintTop_toBottomOf="@+id/clickCountLabel" />
 </androidx.constraintlayout.widget.ConstraintLayout>
