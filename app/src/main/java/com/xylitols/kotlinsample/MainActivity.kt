@@ -8,7 +8,9 @@ import kotlinx.android.synthetic.main.activity_main.*
 class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        // onCreate() 메서드에서는 반드시 부모클래스의 생성자를 호출해야한다.
         super.onCreate(savedInstanceState)
+        // activity_main.xml 파일과 연결시킨다.
         setContentView(R.layout.activity_main)
 
         // 버튼이 클릭되었을때의 코드 작성
